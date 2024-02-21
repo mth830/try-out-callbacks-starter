@@ -36,11 +36,14 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 
 let mySimpleReduce = function(arr, callback) {
   if(arr.length === 0 ) return null;
+  
   let val = arr[0];
+  
   for(let i = 1; i < arr.length; i++){
     let curr = arr[i];
     val = callback(val,curr);
   }
+
   return val;
 };
 
